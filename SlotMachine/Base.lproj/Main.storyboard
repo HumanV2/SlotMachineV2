@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,63 +14,105 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlotMachine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xco-cW-xhh" userLabel="diceOne">
-                                <rect key="frame" x="20" y="388" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0Q-ZY-Iuq" userLabel="diceTwo">
-                                <rect key="frame" x="148" y="388" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ss7-hM-0oX" userLabel="diceThree">
-                                <rect key="frame" x="276" y="388" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRc-5i-4wG">
-                                <rect key="frame" x="107" y="611" width="200" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="ROLL!">
-                                    <color key="titleColor" systemColor="systemYellowColor"/>
-                                    <color key="titleShadowColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="rollButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hKH-Nj-vj1"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Slot Machine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xz-pF-533">
-                                <rect key="frame" x="129" y="250" width="170" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Dkq-fa-J1W" userLabel="Vertical Stack View">
+                                <rect key="frame" x="44" y="0.0" width="808" height="393"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVe-KU-zEy">
+                                        <rect key="frame" x="0.0" y="0.0" width="808" height="129.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slot Machine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Xz-pF-533">
+                                                <rect key="frame" x="319" y="48" width="170" height="33.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstItem="6Xz-pF-533" firstAttribute="centerX" secondItem="mVe-KU-zEy" secondAttribute="centerX" id="6gp-PC-hx9"/>
+                                            <constraint firstItem="6Xz-pF-533" firstAttribute="centerY" secondItem="mVe-KU-zEy" secondAttribute="centerY" id="xsj-ak-2Jf"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Vuf-5s-GSK" userLabel="Horizontal Stack View">
+                                        <rect key="frame" x="0.0" y="131.5" width="808" height="130"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DcG-ae-6t7" userLabel="diceTwo">
+                                                <rect key="frame" x="0.0" y="6" width="249.5" height="118"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7uf-Nv-nMw" userLabel="diceOne">
+                                                <rect key="frame" x="279.5" y="6" width="249" height="118"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mNa-69-C9W" userLabel="diceThree">
+                                                <rect key="frame" x="558.5" y="6" width="249.5" height="118"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstItem="DcG-ae-6t7" firstAttribute="centerX" secondItem="Vuf-5s-GSK" secondAttribute="centerX" id="KcY-0f-bSU"/>
+                                            <constraint firstItem="DcG-ae-6t7" firstAttribute="centerY" secondItem="Vuf-5s-GSK" secondAttribute="centerY" id="SLV-sx-J7g"/>
+                                            <constraint firstItem="mNa-69-C9W" firstAttribute="centerX" secondItem="Vuf-5s-GSK" secondAttribute="centerX" id="UEK-tx-Klu"/>
+                                            <constraint firstItem="mNa-69-C9W" firstAttribute="centerY" secondItem="Vuf-5s-GSK" secondAttribute="centerY" id="XkT-Zy-LJR"/>
+                                            <constraint firstItem="7uf-Nv-nMw" firstAttribute="centerY" secondItem="Vuf-5s-GSK" secondAttribute="centerY" id="jAp-fq-Bah"/>
+                                            <constraint firstItem="7uf-Nv-nMw" firstAttribute="centerX" secondItem="Vuf-5s-GSK" secondAttribute="centerX" id="vpC-89-SKt"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fn9-Kc-wol">
+                                        <rect key="frame" x="0.0" y="263.5" width="808" height="129.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRc-5i-4wG">
+                                                <rect key="frame" x="358" y="39" width="92" height="51"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <state key="normal" title="ROLL!">
+                                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                                    <color key="titleShadowColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rollButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hKH-Nj-vj1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstItem="zRc-5i-4wG" firstAttribute="centerY" secondItem="Fn9-Kc-wol" secondAttribute="centerY" id="mIy-nU-FoC"/>
+                                            <constraint firstItem="zRc-5i-4wG" firstAttribute="centerX" secondItem="Fn9-Kc-wol" secondAttribute="centerX" id="oTC-YA-Epb"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mVe-KU-zEy" firstAttribute="leading" secondItem="Dkq-fa-J1W" secondAttribute="leadingMargin" id="GMW-jR-MZX"/>
+                                    <constraint firstItem="Vuf-5s-GSK" firstAttribute="centerY" secondItem="Dkq-fa-J1W" secondAttribute="centerY" id="Rbi-YP-wMg"/>
+                                    <constraint firstItem="Vuf-5s-GSK" firstAttribute="centerX" secondItem="Dkq-fa-J1W" secondAttribute="centerX" id="gKy-qy-FB0"/>
+                                    <constraint firstItem="mVe-KU-zEy" firstAttribute="centerY" secondItem="Dkq-fa-J1W" secondAttribute="centerY" id="yKJ-hX-aMq"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" name="AccentColor"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="Dkq-fa-J1W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7oc-7G-2KQ"/>
+                            <constraint firstItem="Dkq-fa-J1W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bl4-Ca-AGk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dkq-fa-J1W" secondAttribute="bottom" id="EWl-Bc-AQM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dkq-fa-J1W" secondAttribute="trailingMargin" id="Ysj-Nf-f59"/>
+                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="diceImageViewOne" destination="xco-cW-xhh" id="WRk-RQ-Cgh"/>
-                        <outlet property="diceImageViewThree" destination="ss7-hM-0oX" id="KZY-xD-ZxZ"/>
-                        <outlet property="diceImageViewTwo" destination="e0Q-ZY-Iuq" id="Exo-Na-Mzj"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="532" y="122"/>
+            <point key="canvasLocation" x="531.8840579710145" y="121.875"/>
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
